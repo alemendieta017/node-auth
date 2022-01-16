@@ -50,7 +50,7 @@ class AuthService {
       recoveryToken: token,
     });
     const mail = {
-      from: 'amendieta017@gmail.com', // sender address
+      from: config.senderEmail, // sender address
       to: `${user.email}`, // list of receivers
       subject: 'Recuperación de contraseña', // Subject line
       html: `<b>Ingresa a este link para => ${link}</b>`, // html body
@@ -80,11 +80,11 @@ class AuthService {
 
   async sendMail(infoMail) {
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: config.smtpHost,
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'amendieta017@gmail.com',
+        user: config.senderEmail,
         pass: config.nodemailer_pwd,
       },
     });

@@ -8,6 +8,8 @@ const config = {
   apiKey: process.env.API_KEY,
   jwtSecret: process.env.JWT_SECRET,
   nodemailer_pwd: process.env.NODEMAILER_PWD,
+  senderEmail: process.env.SENDER_EMAIL,
+  smtpHost: process.env.SMTP_HOST,
 };
 
 module.exports = { config };
