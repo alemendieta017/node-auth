@@ -197,6 +197,7 @@ mysql_data
 
 # End of https://www.toptal.com/developers/gitignore/api/node,windows,linux,macos
 
+.env
 pass-hash.js
 token-sign.js
 token-verify.js
